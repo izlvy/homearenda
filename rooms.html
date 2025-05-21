@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mavjud xonalar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mehmonxona</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="bookings.html">Mening bronlarim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Chiqish</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="filterForm" class="row g-3">
+                            <div class="col-md-3">
+                                <label class="form-label">Kirish sanasi</label>
+                                <input type="date" class="form-control" id="checkIn">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Chiqish sanasi</label>
+                                <input type="date" class="form-control" id="checkOut">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Maksimal narx</label>
+                                <input type="number" class="form-control" id="maxPrice">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">&nbsp;</label>
+                                <button type="submit" class="btn btn-primary w-100">Qidirish</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="roomsList">
+            <!-- Xonalar dinamik ravishda JavaScript orqali qo'shiladi -->
+        </div>
+    </div>
+
+    <script src="js/rooms.js"></script>
+</body>
+</html>
